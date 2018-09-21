@@ -1,25 +1,20 @@
 ---
 layout: page
-title: categories
-permalink: /about/
+title: Categories
+permalink: /categories/
 ---
 
 
-<div class="tags-expo">
-  <div class="category">
+  <div style = "font-size: 25px;">
     {% for tag in site.categories %}
-    <ul style = "padding:0;margin:0;list-style:none">
-      <li>
         <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
         <span class="size">({{ tag | last | size }})</span>
-      </li>
-    </ul>
     {% endfor %}
   </div>
-  <div class="tags-expo-section">
+  <div >
     {% for tag in site.categories %}
     <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-    <ul class="tags-expo-posts">
+    <ul>
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
       <li>
@@ -31,4 +26,3 @@ permalink: /about/
     </ul>
     {% endfor %}
   </div>
-</div>
