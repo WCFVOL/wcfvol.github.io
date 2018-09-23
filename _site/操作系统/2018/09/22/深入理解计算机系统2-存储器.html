@@ -8,15 +8,15 @@ Jekyll integration by Chris Bobbe | chrisbobbe.github.io
 <html><head><link rel="shortcut icon" href="/assets/images/favicon.ico" />
 
   <!-- Robots -->
-  <meta name="robots" content="index, follow" /><link rel="canonical" href="http://localhost:4000/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/2018/09/20/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-%E4%B8%80.html" /><!-- Title, description, author --><title>深入理解计算机系统（一） | WCFVOL - QQ:1041875526</title>
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="http://localhost:4000/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/2018/09/22/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2-%E5%AD%98%E5%82%A8%E5%99%A8.html" /><!-- Title, description, author --><title>深入理解计算机系统2-存储器 | WCFVOL - QQ:1041875526</title>
   <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
   <meta name="author" content="wang chunfei" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="深入理解计算机系统（一） | WCFVOL - QQ:1041875526" />
+  <meta property="og:title" content="深入理解计算机系统2-存储器 | WCFVOL - QQ:1041875526" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/images/avatar.jpg" />
-  <meta property="og:url" content="http://localhost:4000/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/2018/09/20/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-%E4%B8%80.html" />
+  <meta property="og:url" content="http://localhost:4000/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/2018/09/22/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2-%E5%AD%98%E5%82%A8%E5%99%A8.html" />
   <meta property="og:site_name" content="WCFVOL" />
   <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
   
@@ -73,42 +73,30 @@ Jekyll integration by Chris Bobbe | chrisbobbe.github.io
 	<article class="shade-two">
 	  <div class="container">
 			<header>
-				<h2>深入理解计算机系统（一）</h2>
-				<p>Wang Chunfei, 20 September 2018</p>
-			</header><h2 id="计算机系统硬件组成">计算机系统硬件组成</h2>
+				<h2>深入理解计算机系统2-存储器</h2>
+				<p>Wang Chunfei, 22 September 2018</p>
+			</header><h2 id="存储器">存储器</h2>
 
 <hr />
 
-<p><img src="/assets/images/深入理解计算机系统（一）/20180921172815.png" height="300" width="400" /></p>
-
-<h3 id="1总线">1.总线</h3>
-
-<p>贯穿整个系统，各组件之间传递消息的通道</p>
-
-<p> </p>
-<h3 id="2io设备">2.I/O设备</h3>
-
-<p>I/O设备是系统与外界沟通的通道，包括鼠标键盘显示器、存储数据用的磁盘等等，I/O设备通过控制器或者适配器与I/O总线相连。</p>
-
-<p> </p>
-<h3 id="3主存">3.主存</h3>
-
-<p>临时存储设备，由一组 <em>动态随机存取存储器</em>（DRAM）组成，用于存放程序和程序处理的数据。</p>
-
-<p> </p>
-<h3 id="4处理器">4.处理器</h3>
+<h1 id="局部性原理">局部性原理</h1>
 
 <ul>
-  <li>操作种类:
+  <li>空间局部性
     <ul>
-      <li>加载: 从主存复制一个字节或者一个字到寄存器，以覆盖寄存器原来的内容。</li>
-      <li>存储: 从寄存器复制一个字节或者一个字到主存。</li>
-      <li>操作: 讲两个寄存器的内容复制到ALU(算术/逻辑单元)，进行运算，然后讲结果放到一个寄存器中。</li>
-      <li>跳转: 从指令中抽取一个字复制到PC中。</li>
+      <li>如果一个内存位置被引用，那么程序很可能在不久的将来引用附近的一个内存位置</li>
+    </ul>
+  </li>
+  <li>时间局部性
+    <ul>
+      <li>被引用过一次的内存位置在不久的将来被再次引用</li>
     </ul>
   </li>
 </ul>
 
+<hr />
+
+<p>未完待续…</p>
 </div>
 	</article>
 </div><!-- Footer -->
